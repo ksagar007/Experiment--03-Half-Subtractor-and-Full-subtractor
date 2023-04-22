@@ -40,23 +40,50 @@ RegisterNumber:  212222110037
 */
 ### Half Adder
 ```
- 
+module HalfSubtractor(A,B,Difference,Borrow);
+input A,B;
+output Difference,Borrow;
+assign Difference = (A ^ B);
+assign Borrow = (~A & B);
+endmodule 
 
 ```
 ### Full Adder
 ```
+module FullSubtractor(A,B,C,Difference,Borrow);
+input A,B,C;
+output Difference,Borrow;
+assign Difference = (~A &(B ^ C) | (B & C));
+assign Borrow = ( A^B^C);
+endmodule
 
 ```
 ## Output:
 
 
 
-## Half Adder
+## Half Subractor
+## Truthtable:
+![output](https://user-images.githubusercontent.com/121117266/233019093-6afe4766-bf66-46c2-98eb-738ef543058a.png)
+## Logic Diagram:
+![output](https://user-images.githubusercontent.com/121117266/233019226-7d044551-908d-42dc-a8c9-d51fa2c38c54.png)
+## RTL realization:
+![output](https://user-images.githubusercontent.com/121117266/233019413-f4133c5f-a771-4516-8c64-e04f4a3af296.png)
+## Timing diagram
+![output](https://user-images.githubusercontent.com/121117266/233019578-1e94a96c-79b1-4e24-b9ae-ff98a88f52fd.png)
+
+## Full Subractor
+## Truthtable:
+![output](https://user-images.githubusercontent.com/121117266/233019115-34b8e1cf-216b-49eb-9231-46ab34090dd8.png)
+## Logic Diagram:
+![output](https://user-images.githubusercontent.com/121117266/233019310-d7f768a5-0615-4e79-bf5f-b6348f736a08.png)
+## RTL realization:
+![output](https://user-images.githubusercontent.com/121117266/233019477-6bf66d6d-3c50-475f-88e6-288a73199ef3.png)
+## Timing diagram
+![output](https://user-images.githubusercontent.com/121117266/233019633-6ab6b0e2-3a93-4626-ba45-e99635c9a43b.png)
 
 
-## Full Adder
 
-##  RTL realization
 
 
 ## Result:
